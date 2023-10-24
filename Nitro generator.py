@@ -1,46 +1,26 @@
-import requests
 import random
 import string
 import time
-import sys
+import colorama 
+from colorama import Fore
+colorama.init()
 
-def animate_cover():
-    sys.stdout.write("""
+print (Fore.RED)
+
+print("""
 ████████╗███████╗███╗   ███╗██████╗ ███████╗██╗   ██╗
 ╚══██╔══╝██╔════╝████╗ ████║██╔══██╗██╔════╝╚██╗ ██╔╝
    ██║   █████╗  ██╔████╔██║██████╔╝█████╗   ╚████╔╝
    ██║   ██╔══╝  ██║╚██╔╝██║██╔═══╝ ██╔══╝    ╚██╔╝
    ██║   ███████╗██║ ╚═╝ ██║██║     ██║        ██║
-   ╚═╝   ╚══════╝╚═╝     ╚═╝╚═╝     ╚═╝        ╚═╝
-    """)
-    sys.stdout.write("\n")
-    sys.stdout.write("NitroGenerator")
-    sys.stdout.write("\n")
-    sys.stdout.write("Loading")
-    start_time = time.time()
-    stop_time = start_time + random.uniform(5, 10)
+   ╚═╝   ╚══════╝╚═╝     ╚═╝╚═╝     ╚═╝        ╚═╝""")
 
-    while time.time() < stop_time:
-        for _ in range(3):
-            sys.stdout.write(".")
-            sys.stdout.flush()
-            time.sleep(0.5)
-        sys.stdout.write("\b \b" * 3)
-        sys.stdout.flush()
-        time.sleep(0.5)
+print("\n")
 
-    sys.stdout.write("\r")
-    sys.stdout.write(" " * 13)
-    sys.stdout.write("\r")
-    sys.stdout.flush()
-    time.sleep(1.5)  # 1.5 seconds pause
+num = int(input("How Many nitro Codes to Generate: "))
 
-animate_cover()
-
-num = int(input('How Many nitro Codes to Generate: '))
-
-with open("Nitro Codes.txt", "w", encoding='utf-8') as file:
-    print("Your nitro codes are being generated, be patient if you entered a high number!")
+with open("Nitro Codes.txt", "w", encoding="utf-8") as file:
+    print("\nYour nitro codes are being generated, be patient if you entered a high number!")
 
     start = time.time()
 
@@ -58,4 +38,4 @@ with open("Nitro Codes.txt") as file:
     for line in file.readlines():
         nitro = line.strip("\n")
 
-input("Press Enter to close the menu")
+time.sleep(4.20)
